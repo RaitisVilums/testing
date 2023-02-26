@@ -13,17 +13,6 @@ const Filter = (props) => {
     onClose && onClose();
   };
 
-  const sortByInputs = document.querySelectorAll(".sort-by-input");
-
-  sortByInputs.forEach((input) => {
-    input.addEventListener("change", function () {
-      sortByInputs.forEach((input) => {
-        if (input !== this) {
-          input.checked = false;
-        }
-      });
-    });
-  });
   return (
     <PopupWrapper onClose={onClose} className={`top`}>
       <div className="filter">
@@ -37,6 +26,8 @@ const Filter = (props) => {
                 object={item}
                 classInput={`sort-by-input`}
                 classLabel={`sort-by-label`}
+                type={`radio`}
+                name={"filterBy"}
               />
             ))}
           </div>
@@ -59,6 +50,7 @@ const Filter = (props) => {
                 object={item}
                 classInput="filter-attributes-input"
                 classLabel="filter-attributes-label"
+                type={`checkbox`}
               />
             ))}
           </div>

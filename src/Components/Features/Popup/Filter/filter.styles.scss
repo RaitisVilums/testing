@@ -2,7 +2,7 @@
 
 .filter {
   position: relative;
-  width: 45rem;
+  // width: 45rem;
 
   background: var(--bg-white);
   border-radius: 0 0 2.5rem 2.5rem;
@@ -10,7 +10,7 @@
   box-shadow: var(--box-shadow-default);
 
   @include respond-to(phone) {
-    width: 100%;
+    // width: 32rem;
   }
 
   &-title {
@@ -26,6 +26,9 @@
     height: 2.7rem;
     overflow: hidden;
     margin-bottom: 2rem;
+    @include respond-to(phone) {
+      width: 34rem;
+    }
   }
 
   &-attributes {
@@ -51,6 +54,10 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
+    @include respond-to(phone) {
+      font-size: 1rem;
+    }
 
     &:not(:last-child)::after {
       content: "";
@@ -79,6 +86,7 @@
   gap: 1rem;
   align-items: center;
   margin-bottom: 0.5rem;
+  flex-wrap: wrap;
 
   &-attribute {
     font-size: 1rem;
@@ -92,6 +100,10 @@
 
 .filter-attributes {
   padding: 0.5rem 2rem;
+
+  @include respond-to(phone) {
+    padding: 0;
+  }
 
   &-title {
     text-transform: uppercase;
