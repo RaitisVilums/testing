@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./reviews.styles.scss";
 
 import PopupWrapper from "../Common/Popup/popup";
@@ -12,8 +12,21 @@ import { Link, useNavigate } from "react-router-dom";
 const Reviews = () => {
   const [startIndex, setStartIndex] = useState(0);
   const [selectedId, setSelectedId] = useState(null);
-  const itemsPerPage = 4;
+  const [itemsPerPage, setItemsPerPage] = useState(4);
   const limitedData = dummyData.slice(startIndex, startIndex + itemsPerPage);
+
+  const handleResize = () => {
+    if (window.innerWidth < 699) {
+      setItemsPerPage(2);
+    } else {
+      setItemsPerPage(4);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const navigate = useNavigate();
 
