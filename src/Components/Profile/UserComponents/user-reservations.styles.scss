@@ -1,0 +1,21 @@
+.reservations {
+  margin-top: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-wrappers);
+  border-radius: 0.5rem;
+  &-wrapper {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    & h1,
+    p {
+      color: #373737;
+      font-size: var(--fs-medium);
+      font-weight: 600;
+    }
+  }
+}

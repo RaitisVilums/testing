@@ -1,0 +1,14 @@
+.messages {
+  margin-top: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: var(--bg-wrappers);
+  border-radius: 0.5rem;
+
+  & h1 {
+    font-size: var(--fs-medium);
+    font-weight: 600;
+  }
+}

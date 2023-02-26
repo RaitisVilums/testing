@@ -1,0 +1,155 @@
+@import "../../mixins.scss";
+
+.selected-review {
+  position: relative;
+  display: flex;
+  max-height: 72rem;
+  width: 42rem;
+  flex-direction: column;
+  background: var(--bg-main);
+  box-shadow: var(--box-shadow-default);
+  border-radius: 2.5rem;
+  padding: 2rem 2rem 1rem 2rem;
+
+  @include respond-to(tablet-landscape) {
+    max-height: 62rem;
+  }
+
+  &-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    @include respond-to(tablet-landscape) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  &-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+}
+
+.pagination {
+  &-items {
+    display: flex;
+  }
+
+  &-item {
+    font-size: var(--fs-default);
+    position: relative;
+
+    &:first-child {
+      margin-right: 2rem;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 3rem;
+        height: 0.1rem;
+        background: var(--bg-green-light);
+        bottom: -0rem;
+        left: 0rem;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        width: 0.5rem;
+        height: 0.5rem;
+        background: var(--bg-green-light);
+        bottom: -0.2rem;
+        left: 0rem;
+      }
+    }
+
+    &:nth-child(2) {
+      &::before {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        width: 0.5rem;
+        height: 0.5rem;
+        background: #000;
+        bottom: -0.2rem;
+        left: 0.2rem;
+      }
+    }
+    &:last-child {
+      margin-left: 2rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 3rem;
+        height: 0.1rem;
+        background: #000;
+        bottom: -0rem;
+        right: 0.2rem;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        width: 0.5rem;
+        height: 0.5rem;
+        background: #000;
+        bottom: -0.2rem;
+        left: 0.2rem;
+      }
+    }
+  }
+}
+
+// ! UTILITY CLASSES
+
+.active {
+  color: var(--bg-green-light);
+  &::after {
+    background: var(--bg-green-light);
+  }
+
+  &::before {
+    content: "";
+
+    background: var(--bg-green-light);
+  }
+
+  &:nth-child(2) {
+    &::before {
+      background: var(--bg-green-light);
+    }
+  }
+  &:last-child {
+    margin-left: 2rem;
+
+    &::after {
+      background: var(--bg-green-light);
+    }
+
+    &::before {
+      background: var(--bg-green-light);
+    }
+  }
+}

@@ -1,0 +1,123 @@
+@import "../../mixins.scss";
+
+.profile {
+  display: flex;
+  justify-content: center;
+  margin-top: 7rem;
+  &-wrapper {
+    width: 100rem;
+    height: 64rem;
+    box-shadow: var(--box-shadow-default);
+    padding: 4rem 2rem 4rem 4rem;
+    border-radius: 1.5rem;
+    background: rgba(102, 75, 127, 0.05);
+    display: flex;
+    gap: 3.5rem;
+    @include respond-to(tablet-landscape) {
+      height: 50rem;
+    }
+  }
+
+  &-user {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &-image {
+      width: 20rem;
+      height: 20rem;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: var(--box-shadow-default);
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    &-date {
+      font-size: var(--fs-default);
+    }
+    &-count {
+      font-size: var(--fs-default);
+    }
+  }
+
+  &-utils {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.utils {
+  &-heading {
+    font-size: 3rem;
+    font-weight: 400;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  &-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    color: #808080;
+    font-weight: 700;
+  }
+
+  &-navigation {
+    display: flex;
+    position: relative;
+
+    &-item {
+      padding: 0.1rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: var(--fs-medium);
+      color: #808080;
+      font-weight: 600;
+      border: 4px solid transparent;
+    }
+
+    &-lane {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.utils-navigation-item {
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: var(--bg-purple);
+    border-bottom: 4px solid var(--bg-purple);
+  }
+}
+
+.svg-icon path {
+  transition: all 0.3s ease-in-out;
+}
+
+.utils-navigation-item:hover .svg-icon path {
+  fill: var(--bg-purple);
+}
+
+.focused {
+  color: var(--bg-purple);
+  border-bottom: 4px solid var(--bg-purple);
+}
+
+.focused .svg-icon path {
+  fill: var(--bg-purple);
+}
