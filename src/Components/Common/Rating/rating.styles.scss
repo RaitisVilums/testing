@@ -1,0 +1,48 @@
+.stars {
+  &-body {
+    position: relative;
+  }
+
+  &-items {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  &-item {
+    position: absolute;
+    display: none;
+    &:checked ~ .stars-label .star {
+      fill: var(--bg-green-light);
+    }
+
+    &:checked ~ .stars-label .star ~ .star {
+      fill: none;
+    }
+  }
+
+  &-label {
+    cursor: pointer;
+
+    &:hover ~ .stars-item .star {
+      fill: var(--bg-green-light);
+    }
+
+    &-size {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  &:hover .stars-item:checked ~ .stars-label .star,
+  &:hover .stars-item:checked ~ .stars-label .star ~ .star {
+    fill: none;
+  }
+}
+
+.star {
+  width: 3.5rem;
+  height: 3.5rem;
+  &:hover {
+    fill: var(--bg-green-light);
+  }
+}

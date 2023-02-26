@@ -1,0 +1,10 @@
+[
+  { "id": "location", "htmlFor": "location", "label": "Location" },
+  { "id": "cheap", "htmlFor": "cheap", "label": "Price $ - $$$" },
+  { "id": "expensive", "htmlFor": "expensive", "label": "Price $$$ - $" },
+  {
+    "id": "best-reviewed",
+    "htmlFor": "best-reviewed",
+    "label": "Best reviewed"
+  }
+]

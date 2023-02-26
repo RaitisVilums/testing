@@ -1,0 +1,30 @@
+{
+  "heading": "Type",
+  "items": [
+    {
+      "id": "restaurant",
+      "label": "Restaurant",
+      "htmlFor": "restaurant"
+    },
+    {
+      "id": "cafe",
+      "label": "Cafe",
+      "htmlFor": "cafe"
+    },
+    {
+      "id": "bistro",
+      "label": "Bistro",
+      "htmlFor": "bistro"
+    },
+    {
+      "id": "fast-food",
+      "label": "Fast Food",
+      "htmlFor": "fast-food"
+    },
+    {
+      "id": "fine-dining",
+      "label": "Fine dining",
+      "htmlFor": "fine-dining"
+    }
+  ]
+}

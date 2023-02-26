@@ -1,0 +1,44 @@
+// ! MIXINS
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 699px) {
+      @content;
+    }
+  } @else if $breakpoint == big-phone {
+    @media (min-width: 700px) and (max-width: 749px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet-portrait {
+    @media (min-width: 750px) and (max-width: 1099px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet-landscape {
+    @media (min-width: 1100px) and (max-width: 1400px) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (min-width: 1401px) {
+      @content;
+    }
+  }
+}
+
+@mixin content-scrollable {
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-green-light) #a4a4a4;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #a4a4a4;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--bg-green-light);
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow-default);
+  }
+
+  scroll-behavior: smooth;
+}

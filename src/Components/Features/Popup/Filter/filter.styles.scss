@@ -1,0 +1,135 @@
+@import "../../../../mixins.scss";
+
+.filter {
+  position: relative;
+  width: 45rem;
+
+  background: var(--bg-white);
+  border-radius: 0 0 2.5rem 2.5rem;
+  padding: 2.5rem 2rem;
+  box-shadow: var(--box-shadow-default);
+
+  @include respond-to(phone) {
+    width: 100%;
+  }
+
+  &-title {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+  }
+
+  &-sort-by {
+    display: flex;
+    border: 2px solid var(--bg-purple);
+    border-radius: 1.5rem;
+    width: 38rem;
+    height: 2.7rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  &-attributes {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-btn {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.sort-by {
+  &-label {
+    font-size: 1.2rem;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      width: 0.2rem;
+      height: 2rem;
+      background: var(--bg-purple);
+      right: -0.2rem;
+    }
+  }
+  &-input {
+    display: none;
+  }
+}
+.sort-by-input:checked + .sort-by-label {
+  background: var(--bg-purple);
+  color: white;
+
+  &::after {
+    display: none;
+  }
+}
+
+.filter-by {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+
+  &-attribute {
+    font-size: 1rem;
+    background: var(--bg-purple);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+}
+
+.filter-attributes {
+  padding: 0.5rem 2rem;
+
+  &-title {
+    text-transform: uppercase;
+    font-size: var(--fs-default);
+  }
+
+  &-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+  }
+
+  &-input {
+    display: none;
+  }
+
+  &-label {
+    font-size: var(--fs-small);
+    border: 2px solid var(--bg-green-dark);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+
+  &-range {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}
+
+.filter-attributes-input:checked + .filter-attributes-label {
+  background: var(--bg-green-dark);
+  color: white;
+
+  &::after {
+    display: none;
+  }
+}

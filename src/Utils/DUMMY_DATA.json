@@ -1,0 +1,145 @@
+[
+  {
+    "name": "Pasta Bella",
+    "location": "Sub 23, Riga",
+    "rating": 5,
+    "image": "https://i.ibb.co/9VP44cp/restourant.jpg",
+    "type": "Pizzeria",
+    "id": 1,
+    "isOpen": false,
+    "promo": true,
+    "onSite": false,
+    "foodImages": [],
+    "interiorImages": [],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum odio eget ante scelerisque, in convallis velit venenatis. Sed vel ipsum massa. Aliquam non efficitur tellus, sed consectetur justo. Duis rutrum tortor eget neque aliquam, in eleifend felis molestie. Mauris ultrices ligula vitae sapien sagittis, eu sagittis sem tristique. Nullam facilisis, nisl vel euismod fermentum, quam orci dictum enim, vel vestibulum arcu sapien a mi. Sed in varius arcu, non bibendum libero.",
+    "slogan": "Delicious and family friendly",
+    "phone": "+37126406100",
+    "filterItems": [
+      "Accessible",
+      "Child-friendly",
+      "Outdoor seating",
+      "Vegan options"
+    ],
+    "workingHours": {
+      "1": {
+        "open": "10:00",
+        "close": "20:00"
+      },
+      "2": {
+        "open": "10:00",
+        "close": "24:00"
+      }
+    },
+    "webpage": "https://www.pastabella.com"
+  },
+  {
+    "name": "Coffee House",
+    "location": "Main Street, New York",
+    "rating": 4.0,
+    "image": "https://i.ibb.co/9VP44cp/restourant.jpg",
+    "type": "Caffe",
+    "id": 2,
+    "isOpen": true,
+    "promo": false,
+    "onSite": true
+  },
+  {
+    "name": "Sushi Paradise",
+    "location": "Ocean Boulevard, Miami",
+    "rating": 4.2,
+    "image": "https://i.ibb.co/9VP44cp/restourant.jpg",
+    "type": "Restaurant",
+    "id": 3,
+    "isOpen": false,
+    "promo": false,
+    "onSite": true
+  },
+  {
+    "name": "The Steak House",
+    "location": "Park Avenue, Los Angeles",
+    "rating": 4.8,
+    "image": "https://i.ibb.co/9VP44cp/restourant.jpg",
+    "type": "Restaurant",
+    "id": 4,
+    "isOpen": true,
+    "promo": false,
+    "onSite": true
+  },
+  {
+    "name": "Thai Kitchen",
+    "location": "River Street, Boston",
+    "rating": 4.3,
+    "image": "https://i.ibb.co/9VP44cp/restourant.jpg",
+    "type": "Restaurant",
+    "id": 5,
+    "isOpen": true,
+    "promo": false,
+    "onSite": true
+  },
+  {
+    "name": "Veggie Delight",
+    "location": "Green Lane, Seattle",
+    "rating": 4.1,
+    "image": "https://i.ibb.co/9VP44cp/restourant.jpg",
+    "type": "Restaurant",
+    "id": 6,
+    "isOpen": false,
+    "promo": false,
+    "onSite": false
+  },
+  {
+    "name": "Burger King",
+    "location": "Highway 12, Chicago",
+    "rating": 4.0,
+    "image": "https://i.ibb.co/9VP44cp/restourant.jpg",
+    "type": "Restaurant",
+    "id": 7,
+    "isOpen": false,
+    "promo": false,
+    "onSite": false
+  },
+  {
+    "name": "Pizza Palace",
+    "location": "Central Square, Dallas",
+    "rating": 4.5,
+    "image": "https://i.ibb.co/9VP44cp/restourant.jpg",
+    "type": "Pizzeria",
+    "id": 8,
+    "isOpen": true,
+    "promo": false,
+    "onSite": false
+  },
+  {
+    "name": "The Fishmonger",
+    "location": "Seafront, San Francisco",
+    "rating": 4.7,
+    "image": "https://i.ibb.co/9VP44cp/restourant.jpg",
+    "type": "Restaurant",
+    "id": 9,
+    "isOpen": true,
+    "promo": false,
+    "onSite": false
+  },
+  {
+    "name": "Taco Bell",
+    "location": "South Boulevard, Austin",
+    "rating": 4.2,
+    "image": "https://i.ibb.co/9VP44cp/restourant.jpg",
+    "type": "Restaurant",
+    "id": 10,
+    "isOpen": true,
+    "promo": false,
+    "onSite": false
+  },
+  {
+    "name": "Taco Bell Main",
+    "location": "South Boulevard, Austin",
+    "rating": 4.2,
+    "image": "https://i.ibb.co/9VP44cp/restourant.jpg",
+    "type": "Restaurant",
+    "id": 11,
+    "isOpen": true,
+    "promo": true,
+    "onSite": false
+  }
+]

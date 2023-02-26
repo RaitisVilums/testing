@@ -1,0 +1,30 @@
+.notification {
+  width: 30rem;
+  height: 9rem;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  top: 12rem;
+  z-index: 100;
+  right: 0;
+  padding: 0 0 0 2rem;
+  background-color: #fff;
+  border-radius: 1.5rem 0 0 1.5rem;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 2rem;
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.notification.show {
+  opacity: 1;
+}

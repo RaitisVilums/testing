@@ -1,0 +1,104 @@
+@import "../../mixins.scss";
+.favorites {
+  width: 32rem;
+  max-height: 72rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  background: var(--bg-main);
+  box-shadow: var(--box-shadow-default);
+  border-radius: 1.5rem 0 0 1.5rem;
+  @include content-scrollable;
+
+  @include respond-to(tablet-landscape) {
+    max-height: 60rem;
+  }
+
+  &-heading {
+    font-size: var(--fs-medium);
+    margin-bottom: 2.2rem;
+  }
+
+  &-wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &-restourant {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    overflow: hidden;
+    border-radius: 2.5rem;
+    background: var(--bg-backdrop-main);
+  }
+
+  &-image {
+    position: absolute;
+    z-index: -1;
+  }
+  &-text {
+    position: absolute;
+    color: white;
+    left: 1rem;
+    bottom: 0.5rem;
+
+    &-para {
+      font-size: 1.2rem;
+    }
+  }
+
+  &-rating {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+    &-heading {
+      font-size: 1.8rem;
+    }
+  }
+  &-location {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: var(--fs-small);
+    font-weight: var(--fw-bold);
+
+    &-icon {
+      width: 1.2rem;
+      height: 1.2rem;
+      background: url("../../Assets/location-small.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+  }
+
+  &-hearth {
+    width: 2.5rem;
+    height: 3.4rem;
+  }
+  &-reviews {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+// !Utility classes
+
+.white {
+  color: white;
+}

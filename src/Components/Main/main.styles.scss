@@ -1,0 +1,118 @@
+@import "../../mixins.scss";
+
+.main {
+  position: relative;
+  padding: 5rem 15rem;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, minmax(32rem, 1fr));
+  gap: 3.5rem;
+
+  @include respond-to(tablet-portrait) {
+    grid-template-columns: repeat(2, minmax(35rem, 1fr));
+    padding: 5rem 10rem;
+  }
+
+  @include respond-to(big-phone) {
+    grid-template-columns: minmax(30rem, 1fr);
+  }
+
+  @include respond-to(phone) {
+    grid-template-columns: minmax(30rem, 1fr);
+    padding: 10rem 5rem;
+  }
+
+  &-language {
+    position: absolute;
+    right: 2.6rem;
+    top: 2rem;
+    display: flex;
+    gap: 2rem;
+  }
+
+  &-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.language-type {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+
+  & img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.wrapper {
+  position: relative;
+  color: white;
+  border-radius: 2.5rem;
+  width: 100%;
+  height: 30rem;
+  background: var(--bg-backdrop-main);
+  &-link {
+    position: absolute;
+    background: transparent;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-text {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 0.9rem;
+
+    &-para {
+      font-size: var(--fs-default);
+      font-weight: var(--fw-bold);
+    }
+  }
+
+  &-raiting {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    &-heading {
+      font-size: var(--fs-big);
+    }
+  }
+
+  &-location {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: var(--fs-small);
+    font-weight: var(--fw-bold);
+
+    &-icon {
+      width: 1.2rem;
+      height: 1.2rem;
+      background: url("../../Assets/location-small.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 2.5rem;
+    z-index: -1;
+  }
+}
+
+.overall-raiting {
+  font-size: var(--fs-default);
+}

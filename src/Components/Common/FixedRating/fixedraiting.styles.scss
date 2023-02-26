@@ -1,0 +1,46 @@
+.fixed {
+  &-body {
+    position: relative;
+  }
+
+  &-items {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  &-item {
+    position: absolute;
+    width: 3.2rem;
+    height: 3.2rem;
+    display: none;
+
+    &:checked ~ .fixed-label .star-2 {
+      fill: var(--bg-green-light);
+    }
+
+    &:checked ~ .fixed-label .star-2 ~ .star-2 {
+      fill: none;
+    }
+  }
+
+  &-label {
+    &:hover ~ .fixed-item .star-2 {
+      fill: var(--bg-green-light);
+    }
+
+    &-size {
+      width: 3.3rem;
+      height: 3.3rem;
+    }
+  }
+
+  &:hover .fixed-item:checked ~ .fixed-label .star-2,
+  &:hover .fixed-item:checked ~ .fixed-label .star-2 ~ .star-2 {
+    fill: none;
+  }
+}
+
+.star-2 {
+  width: inherit;
+  height: inherit;
+}

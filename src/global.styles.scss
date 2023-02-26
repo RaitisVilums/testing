@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import "./mixins.scss";
+:root {
+  // ! Colors
+  --bg-main: #f5f5f5;
+  --bg-white: #fff;
+  --bg-green-dark: #7daa7d;
+  --bg-green-light: #7caa7c;
+  --bg-purple: #664b7f;
+  --bg-backdrop: rgba(217, 217, 217, 0.86) 2.6%;
+  --bg-backdrop-main: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.59) 0%,
+    rgba(0, 0, 0, 0) 14.06%,
+    rgba(0, 0, 0, 0) 46.35%,
+    #000000 100%
+  );
+  --bg-wrappers: #e1e1e1;
+
+  --bg-closed: #aa7c7c;
+
+  --bg-onsite: #c64d54;
+  --bg-input: rgba(102, 75, 127, 0.18);
+  --bg-input-main: rgba(125, 170, 125, 0.2);
+
+  //   ! FontSize
+  --fs-small: 1rem;
+  --fs-default: 1.5rem;
+  --fs-medium: 2rem;
+  --fs-big: 2.5rem;
+
+  // ! FontWeight
+
+  --fw-small: 300;
+  --fw-default: 400;
+  --fw-medium: 500;
+  --fw-thick: 600;
+  --fw-bold: 700;
+
+  // ! Shadows
+
+  --box-shadow-default: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+// ! Default resets
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond-to(tablet-landscape) {
+    font-size: 56.25%;
+  }
+
+  @include respond-to(tablet-portrait) {
+    font-size: 50%;
+  }
+}
+
+body {
+  background: var(--bg-main);
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+h1 {
+  font-size: var(--fs-big);
+}
+
+p {
+  font-size: var(--fs-default);
+}
+
+span {
+  font-size: var(--fs-small);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 1px solid var(--bg-green-light);
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+// ! Utility clases
+
+.mr-btm {
+  margin-bottom: 1rem;
+}
+
+.margin {
+  margin-top: 4.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+
+  &-column {
+    flex-direction: column;
+  }
+}
+
+.grid {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, minmax(30rem, 1fr));
+  gap: 3.5rem;
+}

@@ -1,0 +1,76 @@
+.menu-page {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    & h2 {
+      font-size: var(--fs-medium);
+      font-weight: 600;
+    }
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & h3 {
+      font-size: var(--fs-medium);
+      font-weight: 400;
+    }
+  }
+  &__sub-heading {
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+
+    & p {
+      font-size: 1.7rem;
+    }
+    & :not(:last-child)::after {
+      content: "";
+      position: absolute;
+      width: 0.3rem;
+      height: 2rem;
+      background: var(--bg-green-light);
+      transform: rotateZ(10deg);
+      margin-left: 0.5rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__container {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    position: relative;
+    flex-direction: column;
+
+    &:first-child {
+      padding-right: 1rem;
+    }
+    &:last-child {
+      padding-left: 1rem;
+    }
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      width: 0.4rem;
+      height: 100%;
+      background: var(--bg-green-light);
+      top: 0;
+      right: 0;
+    }
+  }
+  &__content--drinks {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+// ! UTILITY CLASSES
+.sub-heading__span {
+  font-size: var(--fs-medium);
+  font-weight: 600;
+}

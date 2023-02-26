@@ -1,0 +1,28 @@
+.price {
+  &-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  &-label-fixed {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border-radius: 1.5rem;
+    font-weight: var(--fw-medium);
+    border: 3px solid var(--bg-green-light);
+    padding: 0.5rem;
+    // cursor: pointer;
+  }
+  &-input:checked + &-label-fixed {
+    background-color: var(--bg-green-light);
+    color: white;
+  }
+}
+
+.form-price-fixed {
+  display: flex;
+  gap: 0.4rem;
+}
