@@ -13,7 +13,7 @@ const Header = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [isDesktop]);
+  });
 
   return isDesktop ? <DesktopHeader /> : <PhoneHeader />;
 };

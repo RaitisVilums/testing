@@ -1,28 +1,36 @@
 // ! MIXINS
 
+// ! Media querries
 @mixin respond-to($breakpoint) {
+  $phone: 43.75em; // 699px
+  $big-phone: 46.875em; // 750px
+  $tablet-portrait: 68.75em; // 1100px
+  $tablet-landscape: 87.5em; // 1400px
+
   @if $breakpoint == phone {
-    @media (max-width: 699px) {
+    @media (max-width: $phone) {
       @content;
     }
   } @else if $breakpoint == big-phone {
-    @media (min-width: 700px) and (max-width: 749px) {
+    @media (min-width: $phone) and (max-width: $big-phone) {
       @content;
     }
   } @else if $breakpoint == tablet-portrait {
-    @media (min-width: 750px) and (max-width: 1099px) {
+    @media (min-width: $big-phone) and (max-width: $tablet-portrait) {
       @content;
     }
   } @else if $breakpoint == tablet-landscape {
-    @media (min-width: 1100px) and (max-width: 1400px) {
+    @media (min-width: $tablet-portrait) and (max-width: $tablet-landscape) {
       @content;
     }
   } @else if $breakpoint == desktop {
-    @media (min-width: 1401px) {
+    @media (min-width: $tablet-landscape) {
       @content;
     }
   }
 }
+
+// ! SCROLL BAR
 
 @mixin content-scrollable {
   scrollbar-width: thin;
@@ -41,4 +49,33 @@
   }
 
   scroll-behavior: smooth;
+}
+
+// ! Animations
+
+@mixin slide-top-bottom {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.3s ease-in-out;
+
+  &.open {
+    height: auto;
+    transition: height 0.3s ease-in-out;
+  }
+
+  &.slide-top {
+    transform: translateY(-100%);
+  }
+
+  &.slide-bottom {
+    transform: translateY(100%);
+  }
+
+  &.open.slide-top {
+    transform: translateY(0%);
+  }
+
+  &.open.slide-bottom {
+    transform: translateY(0%);
+  }
 }

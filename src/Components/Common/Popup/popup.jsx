@@ -2,7 +2,7 @@ import React from "react";
 import "./popup.styles.scss";
 import ReactDOM from "react-dom";
 
-const PopupWrapper = ({ children, className, onClose }) => {
+const PopupWrapper = ({ children, className, onClose, backdrop }) => {
   return ReactDOM.createPortal(
     <>
       <div className={`backdrop`} onClick={onClose} />
